@@ -19,9 +19,9 @@ const ModelScroll = () => {
 
   useEffect(() => {
     featureSequence.forEach((feature) => {
-      const video = document.createElement("video");
+      const v = document.createElement("video");
 
-      Object.assign(video, {
+      Object.assign(v, {
         src: feature.videoPath,
         muted: true,
         playsInline: true,
@@ -29,7 +29,7 @@ const ModelScroll = () => {
         crossOrigin: "anonymous",
       });
 
-      video.load();
+      v.load();
     });
   }, []);
 
